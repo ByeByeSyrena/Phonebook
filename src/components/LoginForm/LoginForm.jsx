@@ -1,6 +1,10 @@
 import { useDispatch } from 'react-redux';
 import { loginThunk } from 'redux/auth/operations';
 
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
 export const LoginForm = () => {
   const dispatch = useDispatch();
 
@@ -16,22 +20,37 @@ export const LoginForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        Email
-        <input type="email" name="email" required />
-      </label>
+    <Box
+      component="form"
+      sx={{
+        '& .MuiTextField-root': { m: 1, width: '25ch' },
+      }}
+      noValidate
+      autoComplete="off"
+      onSubmit={handleSubmit}
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      height="100vh"
+    >
+      <TextField
+        required
+        id="outlined-required"
+        label="Email"
+        type="email"
+        name="email"
+      />
 
-      <label>
-        Password
-        <input
-          type="password"
-          name="password"
-          title="Password must be digits and can contain spaces, dashes, parentheses and can start with +"
-          required
-        />
-      </label>
-      <button type="submit">Submit</button>
-    </form>
+      <TextField
+        required
+        id="outlined-required"
+        label="Password"
+        type="password"
+        name="password"
+      />
+      <Button type="submit" variant="outlined">
+        Submit
+      </Button>
+    </Box>
   );
 };

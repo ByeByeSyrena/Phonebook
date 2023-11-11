@@ -2,21 +2,24 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectToken } from 'redux/auth/selectors';
 
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+
 export const MainNavigation = () => {
   const token = useSelector(selectToken);
 
   return (
     <nav>
-      <ul>
-        <li>
+      <List>
+        <ListItem>
           <NavLink to="/">Home</NavLink>
-        </li>
+        </ListItem>
         {token && (
-          <li>
+          <ListItem>
             <NavLink to="/contacts">Contacts</NavLink>
-          </li>
+          </ListItem>
         )}
-      </ul>
+      </List>
     </nav>
   );
 };
