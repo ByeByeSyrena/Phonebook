@@ -1,6 +1,6 @@
 import css from './Loader.module.css';
 import { useSelector } from 'react-redux';
-import { selectLoader } from 'redux/selectors';
+import { selectLoader } from 'redux/contacts/selectors';
 
 const Loader = () => {
   const loader = useSelector(selectLoader);
