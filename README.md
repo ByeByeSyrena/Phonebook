@@ -1,6 +1,12 @@
 # GoIT React Course Final Task || Phonebook
 
-## Technologies Used
+This project is a contact management application that provides the following features:
+
+- **Registration:** Users can register an account to access the application securely.
+- **Email Verification:** Email verification is implemented to ensure secure account creation and user authentication.
+- **Contact Management:** Users can efficiently manage their contacts by adding, deleting, and filtering contacts within the application.
+
+## Technologies that were used during the course
 
 - **React:** JavaScript library for building user interfaces.
 - **React DOM:** Entry point to the DOM and server renderer for React.
